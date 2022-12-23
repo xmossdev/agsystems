@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "9c09570b-a080-45cc-a5a0-122c6f25a78e",
+		"name": "sgsystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11041908"
+	},
+	"item": [
+		{
+			"name": "warehouses",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/warehouses",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"warehouses"
+							],
+							"query": [
+								{
+									"key": "filter[name]",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "filter[code]",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "filter[page]",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "filter[perPage]",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/warehouses/store",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"warehouses",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/warehouses/show/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"warehouses",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/warehouses/update/1?name&code",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"warehouses",
+								"update",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null
+								},
+								{
+									"key": "code",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/warehouses/delete/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"warehouses",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "items",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/items",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"items"
+							],
+							"query": [
+								{
+									"key": "filter[name]",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "filter[compare][price]",
+									"value": "",
+									"description": "najpierw operator porównania, później wartość, np: =20 lub >10",
+									"disabled": true
+								},
+								{
+									"key": "filter[warehouse]",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "filter[page]",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "filter[perPage]",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "filter[count]",
+									"value": "",
+									"description": "najpierw operator porównania, później wartość, np: =20 lub >10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "count",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "warehouse_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/items/store",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"items",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/items/show/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"items",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "count",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "warehouse_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/items/update/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"items",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/items/delete/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"items",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
